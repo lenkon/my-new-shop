@@ -3,12 +3,13 @@ import React from 'react'
 function Product({item}) {
   // console.log(item)
   const {title, image, description, price} = item;
+  const newTitle = title.slice(0, 20);
   return (
-    <div>
-      <h1>{title}</h1>
-      <img src={image}></img>
-      <h3>{price}</h3>
-      <h5>{description}</h5>
+    <div style={{width:'30%', margin:'20px'}}> 
+      <h2>{newTitle}</h2>
+      <img src={image} style={{height:'300px', width:'300px'}}></img>
+      <h3>${price}</h3>
+      <p>{description}</p>
     </div>
   )
 }
